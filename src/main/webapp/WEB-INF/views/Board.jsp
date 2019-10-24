@@ -6,27 +6,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 </head>
 <body>
-<table>
-  <tr>
+<table class="table table-hover">
+  <tr class = "success">
     <th>글 번호</th>
     <th>글 제목</th>
     <th>글 내용</th>
   </tr>
 
 <c:forEach var="qna" items="${boardList}">
-<tr>
+<tr class = "info">
     <td>${qna.q_num}</td>
     <td><a href="${cp}/showInside?q_num=${qna.q_num}">${qna.q_title}</a></td>
   	<td>${qna.q_contents}</td>
   </tr>
 </c:forEach>
-  
-  
-  
+ 
 </table>
-
+<a href="${cp}/write">글쓰기</a>
 
 </body>
 </html>

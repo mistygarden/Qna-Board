@@ -9,6 +9,7 @@
 </head>
 <body>
 <a href="${cp}/showBoard">QNA Board</a>
+<a href="${cp}/comment">comment Board</a>
 
 
 </body>
