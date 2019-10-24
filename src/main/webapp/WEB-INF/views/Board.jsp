@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,15 +14,17 @@
     <th>글 제목</th>
     <th>글 내용</th>
   </tr>
-  
-  
-  
-  <tr>
-    <td>1</td>
-    <td>안녕하세요</td>
-  	<td>저는 고등학생</td>
-  	
+
+<c:forEach var="qna" items="${boardList}">
+<tr>
+    <td>${qna.q_num}</td>
+    <td><a href="${cp}/showInside?q_num=${qna.q_num}">${qna.q_title}</a></td>
+  	<td>${qna.q_contents}</td>
   </tr>
+</c:forEach>
+  
+  
+  
 </table>
 
 

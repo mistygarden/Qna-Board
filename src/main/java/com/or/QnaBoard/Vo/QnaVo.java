@@ -5,6 +5,15 @@ public class QnaVo {
 	String q_title;
 	String q_contents;
 	
+	public QnaVo() {
+		// TODO Auto-generated constructor stub
+	}
+	public QnaVo(int q_num, String q_title, String q_contents) {
+		super();
+		this.q_num = q_num;
+		this.q_title = q_title;
+		this.q_contents = q_contents;
+	}
 	public int getQ_num() {
 		return q_num;
 	}
@@ -23,5 +32,10 @@ public class QnaVo {
 	public void setQ_contents(String q_contents) {
 		this.q_contents = q_contents;
 	}
+	@Override
+	public String toString() {
+		return "QnaVo [q_num=" + q_num + ", q_title=" + q_title + ", q_contents=" + q_contents + "]";
+	}
+	
 	
 }
